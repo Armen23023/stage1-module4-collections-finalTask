@@ -15,7 +15,13 @@ public class DeveloperProjectFinder {
                     }
             }
         }
-
+        list.sort((a,b)->{
+            int result = Integer.compare(b.length(),a.length());
+            if (result==0){
+                result = b.compareTo(a);
+            }
+            return result;
+        });
         return list;
     }
 }
